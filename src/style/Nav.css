@@ -1,0 +1,25 @@
+.nav-root{
+    height: 10vh;
+    margin-right: 10vh;
+    display: flex;
+    direction: row;
+    justify-content: flex-end;
+}
+.nav-root > .titlePink{
+    margin-top: 4vh;
+    text-transform: capitalize;
+    margin-right: 2vh;
+    font-size: 2.1vh;
+    font-weight: bold;
+    font-family: cursive;
+    color: black;
+}
+.nav-root > .titleGray{
+    margin-top: 4vh;
+    font-family: cursive;
+    text-transform: capitalize;
+    margin-right: 2vh;
+    font-size: 2vh;
+    color: gray;
+}
+
