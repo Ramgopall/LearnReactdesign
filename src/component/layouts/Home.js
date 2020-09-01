@@ -8,8 +8,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import SearchIcon from '@material-ui/icons/Search';
 
 import Nav from "../nav/Nav";
-import Slider from './Slider';
-import image1 from '../../assets/img.png';
+import Slider from '../slider/Slider';
 import '../../style/Home.css';
 
 const Home = () => {
@@ -31,7 +30,6 @@ const Home = () => {
                         <TwitterIcon className="social_tw" />
                         <YouTubeIcon className="social_yt" />
                     </Box>
-
                 </Box>
             </Box>
             <Nav />
