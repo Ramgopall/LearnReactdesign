@@ -1,0 +1,13 @@
+.title {
+    position: relative;
+    top: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.cards {
+    position: relative;
+    top: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+}

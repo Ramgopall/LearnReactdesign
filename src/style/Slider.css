@@ -1,5 +1,22 @@
-.imgg{
+.background-image {
+    position: absolute;
     width: 100vw;
-    height: 70vh;
-    object-fit: contain
-}
+    height: 100vh;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+  }
+  
+  .img1 {
+    z-index: -1;
+  }
+  
+  .img2 {
+    z-index: -2;
+  }
+  
+  .img3 {
+    z-index: -3;
+  }

@@ -9,10 +9,17 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import Nav from "../nav/Nav";
 import Slider from '../slider/Slider';
+import Gallery from '../gallery/Gallery';
 import '../../style/Home.css';
+
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Home = () => {
     const [search, setSearch] = React.useState("");
+    const homeRef = React.useRef(null)
+    const galleryRef = React.useRef(null)
+
+    const executeScroll = (data) => scrollToRef(data)
 
     return (
         <Box className="root">
@@ -32,7 +39,17 @@ const Home = () => {
                     </Box>
                 </Box>
             </Box>
-            <Nav />
+            <Nav
+                refProp={homeRef}
+                onSelect={(data) => {
+                    if (data === 0) {
+                        executeScroll(homeRef)
+                    }
+                    else if (data === 1) {
+                        executeScroll(galleryRef)
+                    }
+                }}
+            />
             <Box className="searchBox">
                 <TextField
                     className="search"
@@ -46,6 +63,7 @@ const Home = () => {
                 <SearchIcon />
             </Box>
             <Slider />
+            <Gallery refProp={galleryRef} />
         </Box >
     );
 };

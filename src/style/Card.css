@@ -1,0 +1,43 @@
+.card {
+    position: relative;
+    border: 0px solid black;
+    box-shadow: 18px 8px 18px -9px rgb(152, 146, 146);
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: lightpink;
+    transition: transform 0.4s;
+    margin-left: 1vw;
+    
+    cursor: pointer;
+    background-color: #CAA472;
+}
+
+
+.card > img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.card:hover {
+    transform: scale(1.07);
+    /* opacity: 0.95; */
+}
+
+.cardInfo > h3 {
+    display: grid;
+    place-items: center;
+    font-size: 2vh;
+    font-weight: bold;
+    font-weight: normal;
+}
+
+.cardInfo > h4 {
+    display: grid;
+    place-items: center;
+    font-size: 1.8vh;
+    font-weight: 300;
+    margin-top: -9px;
+    text-transform: capitalize;
+}
+
