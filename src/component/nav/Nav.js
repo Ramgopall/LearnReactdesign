@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@material-ui/core/Box";
 import Button from '@material-ui/core/Button';
 import '../../style/Nav.css';
-const Nav = ({ onSelect, refProp }) => {
+const Nav = ({ onSelect, refProp, isTop }) => {
     const [navSelected, setNavSelection] = React.useState(0);
 
     const handleClick = (position) => {
@@ -10,6 +10,13 @@ const Nav = ({ onSelect, refProp }) => {
         onSelect(position)
 
     }
+
+    React.useEffect(() => {
+        if (isTop) {
+            setNavSelection(0)
+        }
+    }, [isTop, setNavSelection]);
+
     return (
         <Box className="nav-root" ref={refProp}>
             <Button className={navSelected === 0 ? "titlePink" : "titleGray"} onClick={() => { handleClick(0) }}>Home</Button>

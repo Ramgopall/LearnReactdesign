@@ -10,16 +10,30 @@ import SearchIcon from '@material-ui/icons/Search';
 import Nav from "../nav/Nav";
 import Slider from '../slider/Slider';
 import Gallery from '../gallery/Gallery';
+import AboutUs from '../about/AboutUs';
 import '../../style/Home.css';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Home = () => {
     const [search, setSearch] = React.useState("");
+    const [isTopp, setTop] = React.useState(false);
     const homeRef = React.useRef(null)
     const galleryRef = React.useRef(null)
+    const aboutRef = React.useRef(null)
 
     const executeScroll = (data) => scrollToRef(data)
+
+    React.useEffect(() => {
+        window.onscroll = function () {
+            if (window.pageYOffset === 0) {
+                setTop(true)
+            }
+            else {
+                setTop(false)
+            }
+        };
+    }, [setTop])
 
     return (
         <Box className="root">
@@ -40,6 +54,7 @@ const Home = () => {
                 </Box>
             </Box>
             <Nav
+                isTop={isTopp}
                 refProp={homeRef}
                 onSelect={(data) => {
                     if (data === 0) {
@@ -47,6 +62,9 @@ const Home = () => {
                     }
                     else if (data === 1) {
                         executeScroll(galleryRef)
+                    }
+                    else if (data === 2) {
+                        executeScroll(aboutRef)
                     }
                 }}
             />
@@ -64,6 +82,8 @@ const Home = () => {
             </Box>
             <Slider />
             <Gallery refProp={galleryRef} />
+            <AboutUs refProp={aboutRef} />
+
         </Box >
     );
 };

@@ -7,7 +7,7 @@ import "../../style/Gallery.css";
 
 const Gallery = ({ refProp }) => {
     return (
-        <Box >
+        <Box className="gallery-root">
             <h1 className="title" ref={refProp}>Gallery</h1>
             <Box className="cards">
                 <Card img="https://cdn.shopify.com/s/files/1/0011/7558/4828/products/16cm-Baby-Groot-Flowerpot-Action-Figures-Cute-Guardians-Of-The-Galaxy-PVC-Doll-Creative-Model-Toy.jpg_640x640_19499c64-5f64-4998-bf54-f87c390d4f4e.jpg?v=1571611236" />

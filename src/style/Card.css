@@ -3,19 +3,20 @@
     border: 0px solid black;
     box-shadow: 18px 8px 18px -9px rgb(152, 146, 146);
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 2vh;
     background-color: lightpink;
     transition: transform 0.4s;
     margin-left: 1vw;
-    
+    width: 22vw;
+    height: 55vh;
     cursor: pointer;
     background-color: #CAA472;
 }
 
 
 .card > img {
-    width: 300px;
-    height: 300px;
+    width: 22vw;
+    height: 43.7vh;
     object-fit: contain;
 }
 
